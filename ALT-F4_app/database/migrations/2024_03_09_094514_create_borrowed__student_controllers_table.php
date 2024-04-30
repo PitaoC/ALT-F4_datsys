@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('borrowed__student_controllers', function (Blueprint $table) {
             $table->id();
-            $table->integer('student_id');
-            $table->integer('book_id');
-            $table->string('status', 20);
+            $table->string('Book_Name', 50);
+            $table->string('Student_Name', 50);
+            $table->string('Date_Borrowed', 50);
+            $table->string('Status', 50);
             $table->timestamps();
         });
     }

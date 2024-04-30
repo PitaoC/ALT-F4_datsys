@@ -38,4 +38,10 @@ Route::put('books/{id}/update',[BookController::class,'update']);
 Route::delete('books/{id}/delete',[BookController::class,'delete']);
 
 //Route::resource('/borrowed','App\Http\Controllers\BorrowedController')->except(['create','edit']);
-Route::get('borrowed/{id}', [BorrowedController::class, 'show']);
+//Route::get('borrowed/{id}', [BorrowedController::class, 'show']);
+Route::resource('/borroweds','App\Http\Controllers\BorrowedController')->except(['create','edit']);
+Route::post('borroweds',[BorrowedController::class,'store']);
+Route::get('borroweds/{id}', [BorrowedController::class, 'show']);
+Route::get('borroweds/{id}/edit', [BorrowedController::class, 'edit']);
+Route::put('borroweds/{id}/update',[BorrowedController::class,'update']);
+Route::delete('borroweds/{id}/delete',[BorrowedController::class,'delete']);
