@@ -12,7 +12,7 @@ class Borrowed_StudentController extends Model
     public $timestamps = false;
 
 
-        public function student()
+public function student()
 {
     return $this->belongsTo(Student_StudentController::class);
 }

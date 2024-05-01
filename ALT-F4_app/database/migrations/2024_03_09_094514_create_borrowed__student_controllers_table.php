@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('Book_Name', 50);
             $table->string('Student_Name', 50);
             $table->string('Date_Borrowed', 50);
-            $table->string('Status', 50);
+            $table->string('Status')->default('BORROWED');
             $table->timestamps();
         });
     }
